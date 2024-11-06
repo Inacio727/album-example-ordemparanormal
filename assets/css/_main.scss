@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    justify-items: center;
+}
+
+.card {
+    margin: 20px;
+    width: 300px;
+    height: 350px;
+    background-color: $inside2-bg-color2;
+    border-radius: 15px;
+}
+
+.ordem{
+    .divimg{
+        z-index: 1;
+        img{
+            width: 100%;
+        }
+    }
+    .textoordem{
+        z-index: 2;
+        height: 70%;
+        width: 100%;
+    }
+}
