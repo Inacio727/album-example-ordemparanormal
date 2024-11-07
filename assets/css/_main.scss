@@ -1,11 +1,15 @@
-.main{
-    display: flex;
-}
-
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     justify-items: center;
+    @media (max-width: 1530px){
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        
+    }
+    @media (max-width: 1230px){
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        
+    }
 }
 
 .card {
@@ -14,18 +18,21 @@
     height: 350px;
     background-color: $inside2-bg-color2;
     border-radius: 15px;
-}
-
-.ordem{
-    .divimg{
-        z-index: 1;
-        img{
-            width: 100%;
-        }
-    }
-    .textoordem{
-        z-index: 2;
-        height: 70%;
+    position: relative;
+    img{
         width: 100%;
+        border-radius: 15px 15px 0 0;
+        height: 60%;
+        object-fit: cover;
+        object-position: top;
+    }
+    .card-text{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background: rgba($color: $inside2-bg-color2, $alpha: 0.7);
+        height: 40%;
     }
 }
